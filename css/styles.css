@@ -1,0 +1,48 @@
+/**
+  #070707 black
+  #553555 violet
+  #755B69 lavander
+  #96C5B0 green
+  #ADF1D2 mint
+ **/
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "  Segoe UI Symbol";
+	background: #755B69
+}
+
+h1 {
+	position: sticky;
+	top: 1rem;
+}
+
+img {
+	width: 100%;
+  	height: auto;
+	outline: 1px solid #553555;
+}
+
+h1, a, p, ul {
+	color: #eee;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul.image-sizes {
+      display: flex;
+    }
+
+    ul.image-sizes li {
+      margin: 0 1rem;
+    }
+
+    ul.image-sizes li:first-child {
+      margin-left: 0;
+    }
+
+    ul.image-sizes li:last-child {
+      margin-right: 0;
+    }

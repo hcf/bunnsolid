@@ -1,0 +1,70 @@
+<!doctype html>
+<html class="no-js" lang="no">
+
+<head>
+  <meta charset="utf-8">
+  <title>Bunnsolide webløsninger - responsive images</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+  <h1><a href="/">Responsive images</a></h1>
+  <p>Image sizes:</p>
+  <ul class="image-sizes">
+    <li>300 × 150</li>
+    <li>500 × 251</li>
+    <li>750 × 376</li>
+    <li>1000 × 501</li>
+    <li>1250 × 626</li>
+    <li>1500 × 752</li>
+    <li>1750 × 877</li>
+    <li>2000 × 1002</li>
+    <li>2500 × 1253</li>
+    <li>3000 × 1503</li>
+    <li>3500 × 1754</li>
+    <li>4000 × 2004</li>
+    <li>4500 × 2255</li>
+    <li>5000 × 2505</li>
+  </ul>
+  <p>Device pixel ratio: <span class="js-device-pixel-ratio"></span></p>
+  <p>Image width: <span class="js-image-width"></span></p>
+  <p>Pixel needed to render image: <span class="js-render-image-pixels"></span></p>
+
+  <img srcset="img/lambda@300w.jpg 300w,
+               img/lambda@500w.jpg 500w,
+               img/lambda@750w.jpg 750w,
+               img/lambda@1000w.jpg 1000w,
+               img/lambda@1250w.jpg 1250w,
+               img/lambda@1500w.jpg 1500w,
+               img/lambda@1750w.jpg 1750w,
+               img/lambda@2000w.jpg 2000w,
+               img/lambda@2500w.jpg 2500w,
+               img/lambda@3000w.jpg 3000w,
+               img/lambda@3500w.jpg 3500w,
+               img/lambda@4000w.jpg 4000w,
+               img/lambda@4500w.jpg 4500w,
+               img/lambda@5000w.jpg 5000w"
+    sizes="calc(100vw - 16px)"
+    src="img/lambda@1000w.jpg" 
+    alt="Lambdabygningen"
+    class="responsive-image">
+
+
+  <script type="text/javascript">
+    function reportImageSize() {
+      var devicePixelRatio = window.devicePixelRatio;
+      var imageWidth = document.querySelector(".responsive-image").width
+
+      document.querySelector(".js-image-width").innerText = imageWidth;
+      document.querySelector(".js-render-image-pixels").innerText = devicePixelRatio*imageWidth;
+      document.querySelector(".js-device-pixel-ratio").innerText = devicePixelRatio;
+    }
+
+    window.onresize = reportImageSize;
+    setTimeout(reportImageSize, 5);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html class="no-js" lang="no">
+
+<head>
+  <meta charset="utf-8">
+  <title>Bunnsolide webløsninger - responsive images</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+
+  <h1><a href="/">Responsive images</a></h1>
+
+  <picture>
+    <source srcset="img/lambda_small_crop.jpg" media="(max-width: 500px)">
+    <source srcset="img/lambda_medium_crop.jpg" media="(min-width: 500px) and (max-width: 1000px)">
+    <source srcset="img/lambda@2000w.jpg" media="(min-width: 1000px)">
+    <img 
+      src="img/lambda@2000w.jpg" 
+      alt="Lambdabygningen">
+  </picture>
+</body>
+
+</html>
